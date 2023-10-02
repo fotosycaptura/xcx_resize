@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 ##############################################################
 # Desarrollado por @fotosycaptura                            #
 # Informar bugs o sugerencias                                #
@@ -11,8 +10,8 @@
 # Extension de la imagen                                     #
 ##############################################################
 
-smg_size = 600
-smg_ext = "*.JPG"
+smg_size = 800
+smg_ext = "*.jpg"
 
 ##############################################################
 
@@ -46,7 +45,7 @@ def redimensiona():
             img = Image.open(i)
             wpercent = (basewidth / float(img.size[0]))
             hsize = int((float(img.size[1]) * float(wpercent)))
-            img = img.resize((basewidth, hsize), PIL.Image.ANTIALIAS)
+            img = img.resize((basewidth, hsize), PIL.Image.LANCZOS)
             img.save(i)
 def menu():
     print ("Selecciona una opción")
